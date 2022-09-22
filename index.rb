@@ -7,3 +7,13 @@ def decode_char(str)
   }
   alphabets[str]
 end
+
+def decode_word(word)
+  word_split = word.split
+  word_split.map { |string| decode_char(string) }.join
+end
+
+def decode_message(message)
+  message_split = message.split('  ')
+  message_split.map { |word| decode_word(word) }.join(' ')
+end
