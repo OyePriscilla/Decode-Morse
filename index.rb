@@ -17,3 +17,5 @@ def decode_message(message)
   message_split = message.split('  ')
   message_split.map { |word| decode_word(word) }.join(' ')
 end
+
+print decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
